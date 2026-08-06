@@ -323,6 +323,14 @@
         "name": "NewSprite14",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite15.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite15",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -355,7 +363,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.4027225833325932,
+        "zoomFactor": 0.44485159988866724,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -559,6 +567,23 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 5,
+          "height": 288,
+          "keepRatio": true,
+          "layer": "",
+          "name": "NewSprite",
+          "persistentUuid": "ef0584e2-3e5f-4ca2-ba49-ad64a2aa4aa3",
+          "width": 288,
+          "x": 1280,
+          "y": 512,
+          "zOrder": 103,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -641,10 +666,10 @@
               "yGrabOffset": 0
             },
             {
-              "acceleration": 10000,
-              "angularMaxSpeed": 180,
               "name": "TopDownMovement",
               "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+              "acceleration": 10000,
+              "angularMaxSpeed": 180,
               "allowDiagonals": true,
               "angleOffset": 0,
               "customIsometryAngle": 30,
@@ -1346,6 +1371,68 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "NewSprite",
+          "persistentUuid": "8aae0ce4-366d-423e-a4c8-15e760d686e0",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite15",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 62,
+                            "y": 1
+                          },
+                          {
+                            "x": 62,
+                            "y": 54
+                          },
+                          {
+                            "x": 0,
+                            "y": 54
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -1377,6 +1464,9 @@
           },
           {
             "objectName": "knife"
+          },
+          {
+            "objectName": "NewSprite"
           }
         ]
       },
