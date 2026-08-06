@@ -331,6 +331,14 @@
         "name": "NewSprite15",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite16.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite16",
+        "smoothed": false,
+        "userAdded": false
       }
     ]
   },
@@ -363,7 +371,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.44485159988866724,
+        "zoomFactor": 0.525086006778253,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -570,16 +578,15 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 5,
-          "height": 288,
+          "customSize": false,
+          "height": 0,
           "keepRatio": true,
           "layer": "",
           "name": "NewSprite",
-          "persistentUuid": "ef0584e2-3e5f-4ca2-ba49-ad64a2aa4aa3",
-          "width": 288,
-          "x": 1280,
-          "y": 512,
+          "persistentUuid": "f67f3dcf-c513-4f2d-b5a8-e219c1f3dd9d",
+          "width": 0,
+          "x": 1392,
+          "y": 672,
           "zOrder": 103,
           "numberProperties": [],
           "stringProperties": [],
@@ -1376,7 +1383,8 @@
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "NewSprite",
-          "persistentUuid": "8aae0ce4-366d-423e-a4c8-15e760d686e0",
+          "persistentUuid": "0f20238e-e908-4f77-801e-154e503914ac",
+          "preScale": 2,
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -1394,7 +1402,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite15",
+                      "image": "NewSprite16",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -1411,19 +1419,19 @@
                         [
                           {
                             "x": 0,
-                            "y": 1
+                            "y": 0
                           },
                           {
-                            "x": 62,
-                            "y": 1
+                            "x": 16,
+                            "y": 0
                           },
                           {
-                            "x": 62,
-                            "y": 54
+                            "x": 16,
+                            "y": 16
                           },
                           {
                             "x": 0,
-                            "y": 54
+                            "y": 16
                           }
                         ]
                       ]
@@ -1667,11 +1675,74 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "bullet",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "enemy",
+                    "bullet",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "enemy",
+                    "Animation",
+                    "=",
+                    "\"dead\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+                  },
+                  "parameters": [
+                    "enemy",
+                    "Tween",
+                    "\"opacity\"",
+                    "0",
+                    "\"linear\"",
+                    "0.3",
+                    "yes"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "gun",
+                    "enemy.CenterX()+10",
+                    "enemy.CenterY()-20",
+                    ""
+                  ]
+                }
+              ]
+            },
             {
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
@@ -1830,15 +1901,6 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "enemy",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
                     "bullet",
                     ""
                   ]
@@ -1853,7 +1915,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "aniamtion",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2064,6 +2125,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "pickup",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -2095,14 +2157,6 @@
                 }
               ],
               "actions": [
-                {
-                  "type": {
-                    "value": "Wait"
-                  },
-                  "parameters": [
-                    "0.1"
-                  ]
-                },
                 {
                   "type": {
                     "value": "Create"
@@ -2178,6 +2232,37 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetXY"
+              },
+              "parameters": [
+                "NewSprite",
+                "=",
+                "CursorX()",
+                "=",
+                "CursorY()-4"
+              ]
+            },
+            {
+              "type": {
+                "value": "HideCursor"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
