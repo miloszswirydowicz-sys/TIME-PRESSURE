@@ -347,7 +347,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 2.945706270570273,
+        "zoomFactor": 0.4163025217733338,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -535,6 +535,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "enemy",
+          "persistentUuid": "7d677313-255b-4648-92ec-d37c6cc669f0",
+          "width": 0,
+          "x": 832,
+          "y": 672,
+          "zOrder": 102,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -549,6 +565,7 @@
           "variables": [
             {
               "name": "losowe",
+              "persistentUuid": "e65cb86f-4881-4b3f-b7d6-13af5a0365b2",
               "type": "number",
               "value": 0
             }
@@ -616,12 +633,12 @@
               "yGrabOffset": 0
             },
             {
+              "acceleration": 10000,
+              "angularMaxSpeed": 180,
               "name": "TopDownMovement",
               "type": "TopDownMovementBehavior::TopDownMovementBehavior",
-              "acceleration": 10000,
               "allowDiagonals": true,
               "angleOffset": 0,
-              "angularMaxSpeed": 180,
               "customIsometryAngle": 30,
               "deceleration": 10000,
               "ignoreDefaultControls": false,
