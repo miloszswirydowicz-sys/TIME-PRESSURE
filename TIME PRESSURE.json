@@ -347,7 +347,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.4598521426736356,
+        "zoomFactor": 0.6406912462476514,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -784,20 +784,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 0
+                            "x": 2,
+                            "y": 4
                           },
                           {
-                            "x": 14,
-                            "y": 0
+                            "x": 10.5,
+                            "y": 4
                           },
                           {
-                            "x": 14,
-                            "y": 16
+                            "x": 10.5,
+                            "y": 13.5
                           },
                           {
-                            "x": 0,
-                            "y": 16
+                            "x": 2,
+                            "y": 13.5
                           }
                         ]
                       ]
@@ -826,20 +826,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 0
+                            "x": 2,
+                            "y": 4
                           },
                           {
-                            "x": 14,
-                            "y": 0
+                            "x": 10.5,
+                            "y": 4
                           },
                           {
-                            "x": 14,
-                            "y": 16
+                            "x": 10.5,
+                            "y": 13.5
                           },
                           {
-                            "x": 0,
-                            "y": 16
+                            "x": 2,
+                            "y": 13.5
                           }
                         ]
                       ]
