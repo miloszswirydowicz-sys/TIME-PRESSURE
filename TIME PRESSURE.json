@@ -752,7 +752,7 @@
           ],
           "animations": [
             {
-              "name": "nozyk",
+              "name": "nozyk_uzycie",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -904,7 +904,7 @@
               ]
             },
             {
-              "name": "Player",
+              "name": "nozyk",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -1994,7 +1994,7 @@
                     "Player",
                     "Animation",
                     "=",
-                    "\"Player\""
+                    "\"nozyk\""
                   ]
                 }
               ]
@@ -2071,7 +2071,7 @@
                     "Player",
                     "Animation",
                     "=",
-                    "\"Player\""
+                    "\"nozyk\""
                   ]
                 }
               ],
@@ -2084,7 +2084,7 @@
                     "Player",
                     "Animation",
                     "=",
-                    "\"nozyk\""
+                    "\"nozyk_uzycie\""
                   ]
                 },
                 {
@@ -2128,7 +2128,7 @@
                     "Player",
                     "Animation",
                     "=",
-                    "\"Player\""
+                    "\"nozyk\""
                   ]
                 }
               ]
@@ -2220,7 +2220,7 @@
                     "Player",
                     "Animation",
                     "=",
-                    "\"Player\""
+                    "\"nozyk\""
                   ]
                 }
               ]
