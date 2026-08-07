@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 274,
+    "build": 276,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -328,8 +328,8 @@
     {
       "b": 42,
       "disableInputWhenNotFocused": true,
-      "mangledName": "Untitled_32scene",
-      "name": "Untitled scene",
+      "mangledName": "TEST_95MAP",
+      "name": "TEST_MAP",
       "r": 184,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
@@ -347,7 +347,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.4598521426736357,
+        "zoomFactor": 0.6406912462476516,
         "windowMask": false,
         "selectedLayer": "",
         "gameEditorMode": "instances-editor"
@@ -558,7 +558,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "NewSprite",
+          "name": "Crosshair",
           "persistentUuid": "f67f3dcf-c513-4f2d-b5a8-e219c1f3dd9d",
           "width": 0,
           "x": 704,
@@ -1254,7 +1254,7 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "knife_bullet",
+          "name": "Knife_bullet",
           "persistentUuid": "bb85fa44-b8b6-4dc2-9457-4504a4c4fbe1",
           "preScale": 0.1,
           "type": "Sprite",
@@ -1317,7 +1317,7 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "gun",
+          "name": "Gun",
           "persistentUuid": "5eaf8e02-9ff3-48e2-a243-5fc368c689e9",
           "preScale": 3,
           "type": "Sprite",
@@ -1443,7 +1443,7 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "NewSprite",
+          "name": "Crosshair",
           "persistentUuid": "0f20238e-e908-4f77-801e-154e503914ac",
           "preScale": 2,
           "type": "Sprite",
@@ -1508,34 +1508,39 @@
         "folderName": "__ROOT",
         "children": [
           {
-            "objectName": "Player"
+            "folderName": "MAP",
+            "children": [
+              {
+                "objectName": "Player"
+              },
+              {
+                "objectName": "enemy"
+              },
+              {
+                "objectName": "krzaczki"
+              },
+              {
+                "objectName": "sciana_do_rozwalenia"
+              },
+              {
+                "objectName": "sciana"
+              }
+            ]
           },
           {
-            "objectName": "gun"
+            "objectName": "Gun"
           },
           {
-            "objectName": "knife_bullet"
+            "objectName": "Knife_bullet"
           },
           {
             "objectName": "bullet"
           },
           {
-            "objectName": "krzaczki"
-          },
-          {
-            "objectName": "sciana"
-          },
-          {
-            "objectName": "sciana_do_rozwalenia"
-          },
-          {
-            "objectName": "enemy"
-          },
-          {
             "objectName": "knife"
           },
           {
-            "objectName": "NewSprite"
+            "objectName": "Crosshair"
           }
         ]
       },
@@ -2003,7 +2008,7 @@
                   },
                   "parameters": [
                     "enemy",
-                    "knife_bullet",
+                    "Knife_bullet",
                     "",
                     "",
                     ""
@@ -2091,7 +2096,7 @@
                     "FireBullet",
                     "Player.CenterX()",
                     "Player.CenterY()",
-                    "knife_bullet",
+                    "Knife_bullet",
                     "CursorX()",
                     "CursorY()",
                     "500",
@@ -2111,7 +2116,7 @@
                     "value": "Delete"
                   },
                   "parameters": [
-                    "knife_bullet",
+                    "Knife_bullet",
                     ""
                   ]
                 },
@@ -2232,7 +2237,7 @@
                 "value": "SetXY"
               },
               "parameters": [
-                "NewSprite",
+                "Crosshair",
                 "=",
                 "CursorX()",
                 "=",
