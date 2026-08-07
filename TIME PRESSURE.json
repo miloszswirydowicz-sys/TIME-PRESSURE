@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 274,
+    "build": 276,
     "major": 5,
     "minor": 6,
     "revision": 0
@@ -368,14 +368,68 @@
   },
   "objects": [
     {
-      "adaptCollisionMaskAutomatically": false,
-      "assetStoreId": "",
-      "name": "Player",
-      "persistentUuid": "1b4db6ed-f622-437d-ad0b-a12f47c43444",
-      "preScale": 5,
-      "type": "Sprite",
-      "updateIfNotVisible": false,
-      "variables": [
+      "b": 42,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "TEST_95MAP",
+      "name": "TEST_MAP",
+      "r": 184,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 131,
+      "uiSettings": {
+        "grid": true,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridDepth": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridOffsetZ": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": true,
+        "zoomFactor": 0.6406912462476516,
+        "windowMask": false,
+        "selectedLayer": "",
+        "gameEditorMode": "instances-editor"
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Player",
+          "persistentUuid": "39bbe8be-384d-4dd5-89de-2a59468d0ba2",
+          "width": 0,
+          "x": 96,
+          "y": 112,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "sciana",
+          "persistentUuid": "f644ce55-250c-4f7d-b3a7-24b51dd5997f",
+          "width": 960,
+          "x": 0,
+          "y": 256,
+          "zOrder": 31,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
         {
           "name": "losowe",
           "persistentUuid": "e65cb86f-4881-4b3f-b7d6-13af5a0365b2",
@@ -1674,7 +1728,7 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "celownik",
+          "name": "Crosshair",
           "persistentUuid": "f67f3dcf-c513-4f2d-b5a8-e219c1f3dd9d",
           "width": 0,
           "x": 1312,
@@ -2077,12 +2131,100 @@
           ],
           "actions": [
             {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "bullet",
-                ""
+              "name": "nozyk_uzycie",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "idle4",
+                      "points": [
+                        {
+                          "name": "kill point",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 5.5,
+                        "y": 8
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 4
+                          },
+                          {
+                            "x": 9.5,
+                            "y": 4
+                          },
+                          {
+                            "x": 9.5,
+                            "y": 13.5
+                          },
+                          {
+                            "x": 2,
+                            "y": 13.5
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "idle5",
+                      "points": [
+                        {
+                          "name": "kill point",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 5.5,
+                        "y": 8
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 4
+                          },
+                          {
+                            "x": 9.5,
+                            "y": 4
+                          },
+                          {
+                            "x": 9.5,
+                            "y": 13.5
+                          },
+                          {
+                            "x": 2,
+                            "y": 13.5
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
               ]
             },
             {
@@ -2097,22 +2239,58 @@
               ]
             },
             {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "2"
-              ]
-            },
-            {
-              "type": {
-                "value": "AnimatableCapability::AnimatableBehavior::SetName"
-              },
-              "parameters": [
-                "strzelnica_dummy",
-                "Animation",
-                "=",
-                "\"idle\""
+              "name": "nozyk",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Player4",
+                      "points": [
+                        {
+                          "name": "kill point",
+                          "x": 0,
+                          "y": 0
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 5.5,
+                        "y": 8
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 16,
+                            "y": 0
+                          },
+                          {
+                            "x": 16,
+                            "y": 16
+                          },
+                          {
+                            "x": 0,
+                            "y": 16
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
               ]
             }
           ]
@@ -2210,44 +2388,239 @@
           "type": "Flash::FlashEffect"
         },
         {
-          "name": "Flippable",
-          "type": "FlippableCapability::FlippableBehavior"
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Knife_bullet",
+          "persistentUuid": "bb85fa44-b8b6-4dc2-9457-4504a4c4fbe1",
+          "preScale": 0.1,
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite10",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 0
+                          },
+                          {
+                            "x": 64,
+                            "y": 64
+                          },
+                          {
+                            "x": 0,
+                            "y": 64
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
-          "name": "Opacity",
-          "type": "OpacityCapability::OpacityBehavior"
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Gun",
+          "persistentUuid": "5eaf8e02-9ff3-48e2-a243-5fc368c689e9",
+          "preScale": 3,
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite2",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite12",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 2,
+                            "y": 4
+                          },
+                          {
+                            "x": 15,
+                            "y": 4
+                          },
+                          {
+                            "x": 15,
+                            "y": 13
+                          },
+                          {
+                            "x": 2,
+                            "y": 13
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Platform",
           "type": "PlatformBehavior::PlatformBehavior"
         },
         {
-          "name": "PlatformerObject",
-          "type": "PlatformBehavior::PlatformerObjectBehavior"
-        },
-        {
-          "name": "Resizable",
-          "type": "ResizableCapability::ResizableBehavior"
-        },
-        {
-          "name": "Scale",
-          "type": "ScalableCapability::ScalableBehavior"
-        },
-        {
-          "name": "TopDownMovement",
-          "type": "TopDownMovementBehavior::TopDownMovementBehavior"
-        },
-        {
-          "name": "Tween",
-          "type": "Tween::TweenBehavior"
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Crosshair",
+          "persistentUuid": "0f20238e-e908-4f77-801e-154e503914ac",
+          "preScale": 2,
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite16",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 16,
+                            "y": 0
+                          },
+                          {
+                            "x": 16,
+                            "y": 16
+                          },
+                          {
+                            "x": 0,
+                            "y": 16
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
-      ]
-    }
-  ],
-  "externalEvents": [
-    {
-      "associatedLayout": "Untitled scene",
-      "name": "kod gry",
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "folderName": "MAP",
+            "children": [
+              {
+                "objectName": "Player"
+              },
+              {
+                "objectName": "enemy"
+              },
+              {
+                "objectName": "krzaczki"
+              },
+              {
+                "objectName": "sciana_do_rozwalenia"
+              },
+              {
+                "objectName": "sciana"
+              }
+            ]
+          },
+          {
+            "objectName": "Gun"
+          },
+          {
+            "objectName": "Knife_bullet"
+          },
+          {
+            "objectName": "bullet"
+          },
+          {
+            "objectName": "knife"
+          },
+          {
+            "objectName": "Crosshair"
+          }
+        ]
+      },
       "events": [
         {
           "colorB": 228,
@@ -2700,7 +3073,7 @@
                     "Player",
                     "Animation",
                     "=",
-                    "\"Player\""
+                    "\"nozyk\""
                   ]
                 }
               ]
@@ -2714,7 +3087,7 @@
                   },
                   "parameters": [
                     "enemy",
-                    "knife_bullet",
+                    "Knife_bullet",
                     "",
                     "",
                     ""
@@ -2777,7 +3150,7 @@
                     "Player",
                     "Animation",
                     "=",
-                    "\"Player\""
+                    "\"nozyk\""
                   ]
                 }
               ],
@@ -2790,7 +3163,7 @@
                     "Player",
                     "Animation",
                     "=",
-                    "\"nozyk\""
+                    "\"nozyk_uzycie\""
                   ]
                 },
                 {
@@ -2802,13 +3175,84 @@
                     "FireBullet",
                     "Player.CenterX()",
                     "Player.CenterY()",
-                    "knife_bullet",
+                    "Knife_bullet",
                     "CursorX()",
                     "CursorY()",
                     "500",
                     ""
                   ]
                 },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "0.2"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Knife_bullet",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player",
+                    "Animation",
+                    "=",
+                    "\"nozyk\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "SceneJustBegins"
+                  },
+                  "parameters": [
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "enemy",
+                    "Animation",
+                    "=",
+                    "\"alive\""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "space",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
                 {
                   "type": {
                     "value": "Wait"
@@ -2860,7 +3304,7 @@
                     "enemy",
                     "Animation",
                     "=",
-                    "\"alive\""
+                    "\"nozyk\""
                   ]
                 }
               ]
@@ -2877,7 +3321,7 @@
                 "value": "SetXY"
               },
               "parameters": [
-                "celownik",
+                "Crosshair",
                 "=",
                 "CursorX()",
                 "=",
